@@ -1,0 +1,9 @@
+<h1>Monsterlessons academy</h1>
+<form [formGroup]="addForm" (ngSubmit)="onUserAdd()">
+  <input type="text" formControlName="name" />
+</form>
+
+<div *ngFor="let user of usersSig()">
+  {{ user.name }}
+  <span (click)="removeUser(user.id)">X</span>
+</div>

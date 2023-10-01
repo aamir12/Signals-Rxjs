@@ -1,0 +1,11 @@
+<h1>Monsterlessons academy</h1>
+<form [formGroup]="addForm" (ngSubmit)="onUserAdd()">
+  <input type="text" formControlName="name" />
+</form>
+
+<ng-container *ngIf="users$ | async as users">
+  <div *ngFor="let user of users">
+    {{ user.name }}
+    <span (click)="removeUser(user.id)">X</span>
+  </div>
+</ng-container>
