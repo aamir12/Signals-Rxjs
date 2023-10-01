@@ -7,3 +7,8 @@
   {{ user.name }}
   <span (click)="removeUser(user.id)">X</span>
 </div>
+
+<h1>RXJS+Signals</h1>
+<input type="text" (keyup)="search($event)" />
+
+<div *ngFor="let article of articlesSig()">{{ article.title }}</div>
