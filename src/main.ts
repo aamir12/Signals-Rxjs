@@ -54,7 +54,7 @@ export class App {
     distinctUntilChanged(),
     switchMap((searchValue) =>
       this.http.get<ArticleInterface[]>(
-        `http://localhost:3004/articles?title_like=${searchValue}`
+        `https://jsonplaceholder.typicode.com/posts?userId=${searchValue}`
       )
     )
   );
