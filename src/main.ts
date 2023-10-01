@@ -3,7 +3,7 @@ import { Component, importProvidersFrom, inject, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { bootstrapApplication } from '@angular/platform-browser';
 import { UserService } from './user.service';
-import { FormBuilder, ReactiveFormsModule } from '@angular/forms';
+import { FormBuilder, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { Observable } from 'rxjs';
 import { ArticleInterface, IUser } from './model';
 import { UserSignalService } from './user-signal.service';
@@ -15,7 +15,7 @@ import { debounceTime, distinctUntilChanged, switchMap } from 'rxjs';
 @Component({
   selector: 'my-app',
   standalone: true,
-  imports: [CommonModule, ReactiveFormsModule, CommonModule],
+  imports: [CommonModule, ReactiveFormsModule, CommonModule, FormsModule],
   //templateUrl: './main-rxjs.html',
   templateUrl: './main-signal.html',
 })
